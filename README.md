@@ -1,0 +1,39 @@
+# Jenkinator
+
+Starship plugin to add jenkins' build status on bitbucket repos.
+
+
+
+## Installation
+
+Take the `jenkinator.sh` script and put it on a known folder.
+
+Edit `~/.config/starship.toml` and add at the bottom:
+
+```toml
+[custom.jenkins]
+command = 'jenkinator-folder/jenkinator.sh'
+detect_extensions = ['xml', 'json'] # filters *.pst files
+shell = ['zsh']
+ignore_timeout=true
+```
+
+> **_IMPORTANT:_** you need to provide Bitbucket's credentials to the script with `$BIT_USER` and `$BIT_PASS` you can set them in the `~/.zshrc`:
+
+```conf
+export BIT_USER="USERNAME"
+export BIT_PASS="PASSWORD"
+```
+
+And that's it, now navigate to a repo and you'll see the build status with an icon:
+
+- Successful ❇️
+- Failure 📉
+- Building 🏗️
+
+
+> **_NOTE:_** if there are multiple builds with different statuses the building icon will be displayed.
+
+Author: Guglielmo Bartelloni
+
+
