@@ -3,15 +3,18 @@
 Starship plugin to add jenkins' build status on bitbucket repos.
 
 
-
 ## Installation
+
+Prerequisite:
+
+- jq
 
 Take the `jenkinator.sh` script and put it on a known folder.
 
 Edit `~/.config/starship.toml` and add at the bottom:
 
 ```toml
-[custom.jenkins]
+[custom.bitbucket]
 command = 'jenkinator-folder/jenkinator.sh'
 detect_extensions = ['xml', 'json'] # filters *.pst files
 shell = ['zsh']
@@ -36,4 +39,6 @@ And that's it, now navigate to a repo and you'll see the build status with an ic
 
 Author: Guglielmo Bartelloni
 
+## LICENSE
 
+GNU General Public License 3.0
