@@ -37,6 +37,14 @@ And that's it, now navigate to a repo and you'll see the build status with an ic
 
 > **_NOTE:_** if there are multiple builds with different statuses the building icon will be displayed.
 
+
+## Configuration
+
+You can set the following variables in the script:
+
+- BRANCH: the git branch where the script will check
+- COMPANY_URL: your bitbucket subdomain
+
 Author: Guglielmo Bartelloni
 
 ## LICENSE
